@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "5TekNjmJximdV5s50UZIues4pUeqaIYw3N/+COJJqaY=",
+  "Source": "PostgresDB",
+  "BasePath": "_content/PostgresDB",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}
