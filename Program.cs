@@ -1,5 +1,6 @@
 using PostgresDB.Data;
 using Microsoft.EntityFrameworkCore;
+using PostgresDB.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -12,6 +13,7 @@ builder.Services.AddSwaggerGen();
 
 builder.Services.AddEntityFrameworkNpgsql().AddDbContext<ApiDbContext>(opt =>
     opt.UseNpgsql(builder.Configuration.GetConnectionString("SampleDbConnection")));
+builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
