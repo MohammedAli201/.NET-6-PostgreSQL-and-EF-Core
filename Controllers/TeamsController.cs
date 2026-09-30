@@ -46,12 +46,9 @@ public class TeamsController : ControllerBase
     public async Task<IActionResult> CreateUser(string name, int year)
     {
         var now = DateTime.UtcNow;
-        Guid guidValue = Guid.NewGuid();
-        int intValue = guidValue.GetHashCode();
 
         var team = new Team
         {
-            Id = intValue,
             Name = name,
             Year = year,
 
