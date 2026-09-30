@@ -1,0 +1,15 @@
+# Set this to the HTTPS address printed by dotnet run.
+# These examples require a migrated local PostgreSQL database.
+@baseUrl = https://localhost:7000
+
+### List teams
+GET {{baseUrl}}/Teams
+Accept: application/json
+
+### Create a synthetic team using the actual query-parameter contract
+POST {{baseUrl}}/Teams?name=Portfolio%20Demo&year=2026
+Accept: application/json
+
+### Read a team (replace 1 with the returned ID)
+GET {{baseUrl}}/Teams/1
+Accept: application/json
